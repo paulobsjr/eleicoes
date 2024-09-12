@@ -54,7 +54,7 @@
     }
     .form-group-inline {
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column; /* Alinhamento em coluna */
       gap: 10px;
     }
     .form-group-inline .form-group {
@@ -224,14 +224,13 @@
 </head>
 <body>
   <center>
-    
     <br><br><br>
   </center>
-  <div class="container">
-     <center><h2>FAÇA SUA FOTO COM SEU CANDIDATO</h2></center><br>
+  <div class="container"><BR><BR>
+     <center><h2>FAÇA SUA FOTO COM O SEU CANDIDATO</h2></center><br>
 
     <div class="form-group">
-      <H2><label for="twibbonimg">Escolha a moldura:</label>
+      <h2><label for="twibbonimg">Escolha a moldura:</label></h2>
       <select id="twibbonimg">
         <option value="img/z1.png">Zé do Povo 1</option>
         <option value="img/z2.png">Zé do Povo 2</option>
@@ -244,7 +243,7 @@
       </select>
     </div>
     <div class="form-group">
-      <H2><label for="photoimg">Envie sua foto:</label>
+      <h2><label for="photoimg">Envie sua foto:</label></h2>
       <input type="file" id="photoimg" accept="image/*">
     </div>
     <div class="form-group-inline">
@@ -257,18 +256,15 @@
         <input type="text" id="height" value="100%" placeholder="100%">
       </div>
     </div>
-
-    <hr>
-
     <div class="card">
-      <h2>Pré-visualização</h2>
+      <h2>Visualização</h2>
       <div class="twibbon-container">
         <div class="twibbon">
           <img src="" id="twibbon" alt="Moldura">
           <img src="" id="photo" alt="Foto">
         </div>
       </div><br><br>
-      <h1><button id="download-btn">Baixar Imagem</button>
+      <h1><button id="download-btn">Baixar Imagem</button></h1>
     </div>
   </div>
 
