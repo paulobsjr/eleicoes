@@ -16,8 +16,9 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 20px;
-      background-color: #f0f0f0;
+      background-color: #8D97C1;
       color: #333;
+      font-size: 18px; /* Tamanho da fonte padrão aumentado para dispositivos móveis */
     }
     .container {
       max-width: 1200px;
@@ -29,6 +30,7 @@
     }
     h2 {
       margin-top: 0;
+      font-size: 24px; /* Tamanho da fonte dos títulos aumentado */
     }
     .form-group {
       margin-bottom: 15px;
@@ -36,14 +38,16 @@
     .form-group label {
       display: block;
       margin-bottom: 5px;
+      font-size: 18px; /* Tamanho da fonte das labels aumentado */
     }
     .form-group input, .form-group select {
-      width: 100%;
-      padding: 10px;
+      width: calc(100% - 22px);
+      padding: 12px;
       border-radius: 4px;
       border: 1px solid #ccc;
       background-color: #fff;
       color: #333;
+      font-size: 16px; /* Tamanho da fonte dos inputs e selects aumentado */
     }
     .form-group input::placeholder {
       color: #aaa;
@@ -63,6 +67,7 @@
     }
     .card h2 {
       margin-bottom: 20px;
+      font-size: 24px; /* Tamanho da fonte dos títulos no card aumentado */
     }
     .twibbon-container {
       display: flex;
@@ -98,8 +103,8 @@
     #download-btn, #portfolio-btn, #services-btn {
       display: inline-block;
       margin-top: 10px;
-      padding: 10px 20px;
-      font-size: 16px;
+      padding: 12px 24px;
+      font-size: 18px; /* Tamanho da fonte dos botões aumentado */
       color: #fff;
       background-color: #007bff;
       border: none;
@@ -113,7 +118,7 @@
     .footer {
       text-align: center;
       margin-top: 40px;
-      font-size: 14px;
+      font-size: 18px; /* Tamanho da fonte do rodapé aumentado */
     }
     .footer a {
       color: #007bff;
@@ -147,7 +152,7 @@
     .close {
       color: #aaa;
       float: right;
-      font-size: 28px;
+      font-size: 32px; /* Tamanho da fonte do botão de fechar aumentado */
       font-weight: bold;
     }
     .close:hover,
@@ -161,43 +166,69 @@
       height: 400px;
     }
 
-    /* Estilos responsivos */
+    /* Responsividade */
     @media (max-width: 768px) {
-      .container {
+      body {
         padding: 10px;
+        font-size: 16px; /* Tamanho da fonte ajustado para telas menores */
       }
-      .twibbon-container {
-        height: 300px;
+      h2 {
+        font-size: 20px;
       }
-      .card {
-        margin-top: 10px;
+      .form-group label {
+        font-size: 16px;
       }
-      #download-btn {
-        width: 100%;
-        padding: 15px;
-        font-size: 18px;
+      .form-group input, .form-group select {
+        font-size: 14px;
+        padding: 8px;
       }
-    }
-    @media (max-width: 480px) {
-      .form-group-inline {
-        flex-direction: column;
+      .card h2 {
+        font-size: 20px;
       }
-      .form-group-inline .form-group {
-        width: 100%;
+      #download-btn, #portfolio-btn, #services-btn {
+        font-size: 16px;
+        padding: 10px 20px;
       }
       .footer {
-        font-size: 12px;
-      }
-      #download-btn {
-        padding: 12px;
         font-size: 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 5px;
+        font-size: 14px; /* Tamanho da fonte ajustado para telas muito pequenas */
+      }
+      h2 {
+        font-size: 18px;
+      }
+      .form-group label {
+        font-size: 14px;
+      }
+      .form-group input, .form-group select {
+        font-size: 12px;
+        padding: 6px;
+      }
+      .card h2 {
+        font-size: 18px;
+      }
+      #download-btn, #portfolio-btn, #services-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+      }
+      .footer {
+        font-size: 14px;
       }
     }
   </style>
 </head>
 <body>
-  
-    <h2>Configurar o Twibbon</h2>
+  <center>
+    
+    <br>
+  </center>
+  <div class="container">
+     <center><h2>Configurar o Twibbon</h2></center>
 
     <div class="form-group">
       <label for="twibbonimg">Escolha a moldura:</label>
@@ -213,8 +244,7 @@
       </select>
     </div>
     <div class="form-group">
-      <label for="photoimg">Envie sua foto:<br>
-  </label>
+      <label for="photoimg">Envie sua foto:</label>
       <input type="file" id="photoimg" accept="image/*">
     </div>
     <div class="form-group-inline">
