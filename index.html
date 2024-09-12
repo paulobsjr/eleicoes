@@ -21,7 +21,7 @@
       font-size: 18px; /* Tamanho da fonte padrão aumentado para dispositivos móveis */
     }
     .container {
-      max-width: 800px; /* Largura máxima reduzida */
+      max-width: 1200px;
       margin: 0 auto;
       background: #fff;
       padding: 20px;
@@ -54,7 +54,7 @@
     }
     .form-group-inline {
       display: flex;
-      flex-direction: column; /* Alinhamento em coluna */
+      flex-wrap: wrap;
       gap: 10px;
     }
     .form-group-inline .form-group {
@@ -146,7 +146,7 @@
       padding: 20px;
       border: 1px solid #888;
       width: 80%;
-      max-width: 600px; /* Largura máxima do modal reduzida */
+      max-width: 800px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
     .close {
@@ -224,13 +224,14 @@
 </head>
 <body>
   <center>
+    
     <br><br>
   </center>
-  <div class="container"><BR>
+  <div class="container">
      <center><h2>FAÇA SUA FOTO COM O SEU CANDIDATO</h2></center><br>
 
     <div class="form-group">
-      <h2><label for="twibbonimg">Escolha a moldura:</label></h2>
+      <H2><label for="twibbonimg">Escolha a moldura:</label>
       <select id="twibbonimg">
         <option value="img/z1.png">Zé do Povo 1</option>
         <option value="img/z2.png">Zé do Povo 2</option>
@@ -243,28 +244,31 @@
       </select>
     </div>
     <div class="form-group">
-      <h2><label for="photoimg">Envie sua foto:</label></h2>
+      <H2><label for="photoimg">Envie sua foto:</label>
       <input type="file" id="photoimg" accept="image/*">
     </div>
     <div class="form-group-inline">
       <div class="form-group">
         <label for="width">Ajuste à esquerda:</label>
         <input type="text" id="width" value="100%" placeholder="100%">
-      </div>
+      </div><P>
       <div class="form-group">
         <label for="height">Ajuste ao topo:</label>
         <input type="text" id="height" value="100%" placeholder="100%">
       </div>
     </div>
+
+    <hr>
+
     <div class="card">
-      <h2>Visualização</h2>
+      <h2>Pré-visualização</h2>
       <div class="twibbon-container">
         <div class="twibbon">
           <img src="" id="twibbon" alt="Moldura">
           <img src="" id="photo" alt="Foto">
         </div>
       </div><br><br>
-      <h1><button id="download-btn">Baixar Imagem</button></h1>
+      <h1><button id="download-btn">Baixar Imagem</button>
     </div>
   </div>
 
