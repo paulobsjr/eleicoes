@@ -33,8 +33,8 @@ img#photo{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: auto; /* Ajusta a altura dinamicamente */
-  max-width: 100%; /* Responsivo para dispositivos móveis */
+  height: 400px; /* Altura padrão para desktops */
+  width: 100%;
   margin: 20px 0;
   position: relative;
 }
@@ -42,7 +42,7 @@ img#photo{
 .twibbon {
   position: relative;
   width: 100%;
-  height: auto; /* Ajusta a altura automaticamente */
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,8 +54,8 @@ img#photo{
 #photo {
   position: absolute;
   z-index: 1;
-  max-width: 100%; /* Garante que a foto nunca ultrapasse a largura do contêiner */
-  height: auto; /* Mantém a proporção da imagem */
+  max-width: 100%;
+  height: auto;
   cursor: move;
 }
 
@@ -66,15 +66,37 @@ img#photo{
   height: 100%;
 }
 
-/* Ajuste adicional para telas menores */
+.card h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Estilos para telas menores */
 @media (max-width: 768px) {
   .twibbon-container {
-    height: 300px; /* Ajuste a altura para telas menores */
+    height: 300px; /* Reduz altura em telas de até 768px */
+  }
+
+  .card h2 {
+    font-size: 20px; /* Reduz o tamanho do título */
+  }
+
+  #photo, #twibbon {
+    width: 90%; /* Ajusta a largura para 90% do contêiner em telas médias */
   }
 }
 
 @media (max-width: 480px) {
   .twibbon-container {
-    height: 200px; /* Altura reduzida para telas muito pequenas */
+    height: 200px; /* Reduz ainda mais a altura em telas menores */
+  }
+
+  .card h2 {
+    font-size: 18px; /* Reduz ainda mais o tamanho do título */
+  }
+
+  #photo, #twibbon {
+    width: 80%; /* Ajusta a largura para 80% em telas pequenas */
+    height: auto; /* Mantém a proporção correta */
   }
 }
