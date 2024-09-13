@@ -29,3 +29,52 @@ img#photo{
   display: block;
   text-align: center;
 }
+.twibbon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto; /* Ajusta a altura dinamicamente */
+  max-width: 100%; /* Responsivo para dispositivos móveis */
+  margin: 20px 0;
+  position: relative;
+}
+
+.twibbon {
+  position: relative;
+  width: 100%;
+  height: auto; /* Ajusta a altura automaticamente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+
+#photo {
+  position: absolute;
+  z-index: 1;
+  max-width: 100%; /* Garante que a foto nunca ultrapasse a largura do contêiner */
+  height: auto; /* Mantém a proporção da imagem */
+  cursor: move;
+}
+
+#twibbon {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+}
+
+/* Ajuste adicional para telas menores */
+@media (max-width: 768px) {
+  .twibbon-container {
+    height: 300px; /* Ajuste a altura para telas menores */
+  }
+}
+
+@media (max-width: 480px) {
+  .twibbon-container {
+    height: 200px; /* Altura reduzida para telas muito pequenas */
+  }
+}
