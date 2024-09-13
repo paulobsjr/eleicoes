@@ -49,8 +49,8 @@ img#photo{
     align-items: center;
     width: 80vw; /* Largura baseada na viewport */
     height: 80vw; /* Altura baseada na largura da viewport para manter a proporção */
-    max-width: 500px; /* Limita o tamanho máximo */
-    max-height: 500px; /* Limita o tamanho máximo */
+    max-width: 400px; /* Limita o tamanho máximo */
+    max-height: 400px; /* Limita o tamanho máximo */
     position: relative;
     border: 1px solid #ddd;
     background-color: #fff;
